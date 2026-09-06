@@ -1,0 +1,77 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ✅ Step 23: Navbar fixed at top using Flexbox */
+#header {
+  position: fixed;       /* Always visible at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  display: flex;         /* ✅ Flexbox requirement */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;         /* Ensures it stays above content */
+}
+
+/* Logo */
+#header-img {
+  height: 40px;
+}
+
+/* Nav links */
+#nav-bar {
+  display: flex;         /* Flexbox for nav links */
+  gap: 15px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;   /* Leaves space for fixed header */
+}
+
+/* Form styling */
+#form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+#email, #submit {
+  margin: 10px 0;
+  padding: 8px;
+}
+
+/* ✅ Step 24: Media query for responsiveness */
+@media (max-width: 600px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #nav-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
